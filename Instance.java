@@ -1,28 +1,28 @@
 
 public class Instance {
 	
-	private double[] vect;
+	private String[] vect;
 	private String value;
 	
 	public String getVal() {
 		return value;
 	}
 	
-	public double[] getVec() {
+	public String[] getVec() {
 		return vect;
 	}
 	
 	public Instance() {
-		vect = new double[4];
+		vect = new String[6];
 	}
 	
 	public void fill(String s) {
 		String[] temp;
 		temp = s.split(",");
-		for(int i=0; i<4; i++) {
-			vect[i] = Double.parseDouble(temp[i]);
+		for(int i=0; i<(temp.length-1); i++) {
+			vect[i] = temp[i];
 		}
-		value = temp[4];
+		value = temp[temp.length-1];
 	}
 	
 	public String toString() {

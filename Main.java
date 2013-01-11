@@ -13,8 +13,8 @@ public class Main {
 		
 		try 
 		{	
-			File train = new File("/home/bstrds/workspace/MachLrn/src/car.data");
-			File test = new File("/home/bstrds/workspace/MachLrn/src/cartest");
+			File train = new File("/home/bstrds/workspace/MachLrn/src/houses.data");
+			File test = new File("/home/bstrds/workspace/MachLrn/src/houses.data");
 			
 			tr_sc = new Scanner(train);
 			te_sc = new Scanner(test);
@@ -32,8 +32,12 @@ public class Main {
 			te_ip.fill(te_sc.nextLine());
 		}
 		
-		System.out.print(tr_ip);
+		System.out.println(tr_ip);
+		//System.out.println(tr_ip.getNum());
 		
+		Reg a = new Reg(tr_ip);
+		
+		a.grad();
 		
 		/*Bayes b = new Bayes();
 		

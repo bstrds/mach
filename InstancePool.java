@@ -25,6 +25,10 @@ public class InstancePool {
 		numOfInsts++;
 	}
 	
+	public Instance getInst() {
+		return instl.get(0);
+	}
+	
 	public String toString() {
 		String result = "";
 		for(Instance it : instl) {

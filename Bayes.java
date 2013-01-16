@@ -129,7 +129,7 @@ public class Bayes {
 				if(tokens.containsKey(word))
 					t = tokens.get(word);
 				else {
-					System.out.println(word);
+					System.out.println(word+" Is not in our dictionary :(");
 				}
 				int c = classes.get(category);
 				score[i] += Math.log(coprobs[t][c]);
@@ -138,7 +138,7 @@ public class Bayes {
 		}
 		
 		double max = score[0];
-		int arg = -1;
+		int arg = 0;
 		for(int c=1; c<score.length; c++) {
 			if(score[c]>max) {
 				max = score[c];
@@ -151,7 +151,7 @@ public class Bayes {
 			if(classes.get(cat) == arg) {
 				result = cat;
 				break;
-			}
+			} 
 		}
 		
 		return result;

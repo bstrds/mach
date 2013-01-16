@@ -14,6 +14,10 @@ public class InstancePool {
 		return numOfInsts;
 	}
 	
+	public Instance getInst() {
+		return instl.get(0);
+	}
+	
 	public ArrayList<Instance> getList() {
 		return instl;
 	}
